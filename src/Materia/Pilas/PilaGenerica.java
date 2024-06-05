@@ -7,9 +7,11 @@ import Materia.Models.NodoGenerico;
 public class PilaGenerica<T> {
 
     private NodoGenerico<T> top;
+    private int size;
 
     public PilaGenerica() {
         top = null;
+        size = 0;
     }
 
     public void push(T data) {
@@ -40,6 +42,16 @@ public class PilaGenerica<T> {
         }
 
         return top.data;
+    }
+
+    public int size(){
+        int count = 0;
+        NodoGenerico<T> nodo = top;
+        while (nodo != null) {
+            count++;
+            nodo = nodo.next;
+        }
+        return count;
     }
 
 }
