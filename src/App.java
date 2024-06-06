@@ -1,8 +1,11 @@
 import Materia.Cola.Cola;
 import Materia.Cola.ColaGenerica;
+import Materia.Ejercicio_01_sign.SignValidator;
+import Materia.Ejercicio_02_sorting.StackSorter;
 import Materia.Models.Pantallas;
 import Materia.Pilas.Pila;
 import Materia.Pilas.PilaGenerica;
+import Materia.Ejercicio_01_sign.SignValidator;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -73,6 +76,27 @@ public class App {
         System.out.println();
 
         System.out.println("La cola tiene : "+ colaPantallas.size()+" Elementos");//se elimina uno
+
+        SignValidator signos = new SignValidator();// inicializamos la clase 
+
+        System.out.println(signos.isValing("([]){}"));// usamos el is valing para verificar si estabien o no
+        System.out.println(signos.isValing("({)}"));
+
+        
+        PilaGenerica<Integer> pila2 = new PilaGenerica<>();
+        
+        pila2.push(4);
+        pila2.push(1);
+        pila2.push(8);
+        pila2.push(3);
+        System.out.println("Pila original " + pila2);
+        
+        StackSorter numeros = new StackSorter();
+       numeros.sortStack(pila2);
+
+       System.out.println("Pila ordenada "+ pila2);
+
+        
 
 
     }
