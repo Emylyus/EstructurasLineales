@@ -53,6 +53,18 @@ public class PilaGenerica<T> {
         }
         return count;
     }
+    @Override
+public String toString() {
+    StringBuilder sb = new StringBuilder();
+    NodoGenerico<T> current = top;
+    while (current != null) {
+        sb.append(current.data).append(" ");
+        current = current.next;
+    }
+    return sb.toString().trim();
+}
+
+
     
 
 }
