@@ -2,10 +2,12 @@ import Materia.Cola.Cola;
 import Materia.Cola.ColaGenerica;
 import Materia.Ejercicio_01_sign.SignValidator;
 import Materia.Ejercicio_02_sorting.StackSorter;
+import Materia.ListasEnlazadas.ListaEnlazada;
 import Materia.Models.Pantallas;
 import Materia.Pilas.Pila;
 import Materia.Pilas.PilaGenerica;
 import Materia.Ejercicio_01_sign.SignValidator;
+import Materia.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -95,6 +97,19 @@ public class App {
        numeros.sortStack(pila2);
 
        System.out.println("Pila ordenada "+ pila2);
+
+
+       ListaEnlazada lista = new ListaEnlazada();
+
+        lista.addnode(1);
+        lista.addnode(4);
+        lista.addnode(3);
+        lista.addnode(6);
+        lista.print();
+        lista.deleteNode(1);
+        lista.print();
+        lista.deleteNode(3);
+        lista.print();
 
         
 
