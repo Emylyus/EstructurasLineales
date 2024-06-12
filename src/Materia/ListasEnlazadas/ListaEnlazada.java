@@ -40,6 +40,12 @@ public class ListaEnlazada {
         }
     }
 
+    public int size(){
+        
+
+        return 1;
+    }
+
     public void print(){
         if(head ==null){
             System.out.println("Lista Vacia");
@@ -51,9 +57,29 @@ public class ListaEnlazada {
             current = current.next;
             
         }
-        System.out.println(current.value);
+        System.out.println("Node ->"+current.value);
         System.out.println("Fin de la lista ");
     }
+
+    public int getByPos(int position) {//creamos el metodo para devolver la posicion solicitada empezando desde el final de la lista
+        node lento= head;//Crea un puntero lento "lento"
+        node rapido = head;//Crea un puntero rapido "rapido"
+        
+        for (int i = 0; i < position; i++) {//hace que el valor de "rapido" suba posiciones
+        
+        if (rapido == null) {//verifica si rapido tiene un valor
+        throw new IllegalArgumentException("La posición especificada está fuera de rango.");
+        }
+        rapido = rapido.next;//crece el valor de rapido
+        }
+        
+        while (rapido.next != null) {//hace que cuando el rapido se diferente a null , declare nuevos valores a lento y rapido
+        lento = lento.next;
+        rapido = rapido.next;
+        }
+        
+        return lento.value;//devuelve el valor de lento
+        }
 
 
 

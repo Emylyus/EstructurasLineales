@@ -2,6 +2,7 @@ import Materia.Cola.Cola;
 import Materia.Cola.ColaGenerica;
 import Materia.Ejercicio_01_sign.SignValidator;
 import Materia.Ejercicio_02_sorting.StackSorter;
+import Materia.Ejercicio_03_linkedList.LinkedListEjr;
 import Materia.ListasEnlazadas.ListaEnlazada;
 import Materia.Models.Pantallas;
 import Materia.Pilas.Pila;
@@ -110,6 +111,36 @@ public class App {
         lista.print();
         lista.deleteNode(3);
         lista.print();
+
+
+
+        ListaEnlazada listas2 = new ListaEnlazada();
+
+        listas2.addnode(1);
+        listas2.addnode(2);
+        listas2.addnode(5);
+        listas2.addnode(7);
+        listas2.addnode(6);
+
+        int position = 1;
+        int result = listas2.getByPos(position); //devuelve el dato empezando por el final
+
+        System.out.println("(listaEnlazada) El valor en la posición " + position + " empezando desde el final es: " + result);
+
+
+
+        LinkedListEjr list = new LinkedListEjr();
+
+            list.add(1);
+            list.add(2);
+            list.add(5);
+            list.add(7);
+            list.add(6);
+
+            int posiciones = 1;
+            int resultado = list.getByPos(posiciones); //devuelve el dato empezando por el final
+
+            System.out.println("El valor en la posición " + posiciones + " empezando desde el final es: " + resultado);
 
         
 
